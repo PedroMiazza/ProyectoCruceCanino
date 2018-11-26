@@ -1,3 +1,37 @@
-<p>
-  contacto works!
-</p>
+
+ <div class="inner contact">
+  <div class="contact-form">
+    <form [formGroup]="formContacto" (ngSubmit)="onSubmit()" method="post" action="#">
+      <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s"> 
+        <input type="text" formControlName="name" required="required" class="form" placeholder="Nombre" />
+        <input type="email" formControlName="mail" required="required" class="form" placeholder="Email" />
+        <input type="text" formControlName="telefono" required="required" class="form" placeholder="Teléfono" />
+        <input type="text" formControlName="address" required="required" class="form" placeholder="Ciudad" />
+        <h6>Categoría</h6>
+        <input type="radio" formControlName="categoria" required="required" class="form" placeholder="Particular" />Particular
+        <input type="radio" formControlName="categoria" required="required" class="form" placeholder="Profesional" />Profesional
+        <h3 class="col-xs-6">Datos Del Animal:</h3>
+          <input type="text" formControlName="raza" required="required" class="form" placeholder="Raza" />
+          <input type="text" formControlName="age" required="required" class="form" placeholder="Edad" />
+          <input type="text" formControlName="color" required="required" class="form" placeholder="Color" />
+            <h6>Sexo</h6>
+              <input type="radio" formControlName="sexo" required="required" class="form" placeholder="Macho" />Macho
+              <input type="radio" formControlName="sexo" required="required" class="form" placeholder="Hembra" />Hembra
+            <h6>Opciones</h6>
+              <input type="radio" formControlName="opciones" required="required" class="form" placeholder="Cruzar" />Cruzar
+              <input type="radio" formControlName="opciones" required="required" class="form" placeholder="Adoptar" />Adoptar
+            <textarea name="message" class="form textarea" placeholder="Introduce información sobre tu animal (cuanto más mejor)"></textarea> 
+      <div class="relative fullwidth">
+        <button type="submit" formControlName="submit" class="form-btn semibold" [disabled]="!formContacto.valid">ENVIAR</button>
+      </div>
+    </div>
+      <div class="clear"></div>
+    </form>
+    <div class="mail-message-area">
+      <div class="alert gray-bg mail-message not-visible-message">
+        <strong>¡Gracias!</strong>Tu correo electrónico ha sido entregado.
+      </div>
+    </div>
+ 
+  </div>
+ </div>
