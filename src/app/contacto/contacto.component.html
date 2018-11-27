@@ -1,41 +1,52 @@
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    
     <div class="inner contact">
       <div class="contact-form">
-        <form [formGroup]="formContacto" (ngSubmit)="onSubmit()" method="post" action="#">
-          <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s"> 
-            <div class="row"><span class="col-md-6"><input type="text" formControlName="name" required="required" class="form" placeholder="Nombre" />
-            <input type="email" formControlName="mail" required="required" class="form" placeholder="Email" />
+        <form [formGroup]="formContacto" (ngSubmit)="onSubmit()">
+          <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+            <div class="row"><span class="col-md-6"><input type="text" formControlName="name" required="required" class="form"
+                  placeholder="Nombre" />
+                <input type="email" formControlName="mail" required="required" class="form" placeholder="Email" />
+              </span>
+              <span class="col-md-6"><input type="text" formControlName="telefono" required="required" class="form"
+                  placeholder="Teléfono" />
+                <input type="text" formControlName="address" required="required" class="form" placeholder="Ciudad" />
+              </span></div>
+            <span class="col-md-10">
+              <h6>Categoría: </h6>
+              <input type="radio" formControlName="categoria" value="particular" />
+              <label for="particular">Particular</label>
+              <input type="radio" formControlName="categoria" value="profesional" />
+              <label for="profesional">Profesional</label>
             </span>
-            <span class="col-md-6"><input type="text" formControlName="telefono" required="required" class="form" placeholder="Teléfono" />
-            <input type="text" formControlName="address" required="required" class="form" placeholder="Ciudad" />
-            </span></div>
-            <span class="col-md-10"><h6>Categoría: </h6>
-            <input type="radio" formControlName="categoria" name="categoria" required="required" checked="checked" class="radio" placeholder="Particular" id="particular" />
-            <label for="particular">Particular</label>
-            <input type="radio" formControlName="categoria" name="categoria" required="required" class="radio" placeholder="Profesional" id="profesional" />
-            <label for="profesional">Profesional</label>
+            <span>
+              <h3 class="col-md-12"><strong>Datos Del Animal:</strong></h3>
             </span>
-            <span><h3 class="col-md-12"><strong>Datos Del Animal:</strong></h3></span>
-            <div class="row"><span class="col-md-4"><input type="text" formControlName="raza" required="required" class="form" placeholder="Raza" /></span>
-            <span class="col-md-4"><input type="text" formControlName="age" required="required" class="form" placeholder="Edad" /></span>
-            <span class="col-md-4"><input type="text" formControlName="color" required="required" class="form" placeholder="Color" /></span></div>
-            <span><h6>Sexo: </h6></span>
-            <input type="radio" formControlName="sexo" name="sexo" required="required" checked="checked" class="radio" placeholder="Macho" id="macho" />
-            <label for="macho">Macho</label>
-            <input type="radio" formControlName="sexo" name="sexo" required="required" class="radio" placeholder="Hembra" id="hembra" />
-            <label for="hembra">Hembra</label>
-            <div>
-            <span><h6>Opciones: </h6></span>
-            <input type="radio" formControlName="opciones" name="opciones" required="required" checked="checked" class="radio" placeholder="Cruzar" id="cruzar" />
-            <label for="cruzar">Cruzar</label>
-            <input type="radio" formControlName="opciones" name="opciones" required="required" class="radio" placeholder="Adoptar" id="adoptar" />
-            <label for="adoptar">Adoptar</label>
+            <div class="row"><span class="col-md-4"><input type="text" formControlName="raza" required="required" class="form"
+                  placeholder="Raza" /></span>
+              <span class="col-md-4"><input type="text" formControlName="age" required="required" class="form"
+                  placeholder="Edad" /></span>
+              <span class="col-md-4"><input type="text" formControlName="color" required="required" class="form"
+                  placeholder="Color" /></span></div>
+            <div class="row">
+              <span class="col-md-3">
+                <h6>Sexo: </h6>
+              </span>
+              <span class="col-md-3"><input type="radio" formControlName="sexo" value="macho" />
+              <label for="macho">Macho</label>
+              <input type="radio" formControlName="sexo" value="hembra" />
+              <label for="hembra">Hembra</label></span>             
+                <span class="col-md-3">
+                  <h6>Opciones: </h6>
+                </span>
+                <span class="col-md-3"><input type="radio" formControlName="opciones" value="cruzar" />
+                <label for="cruzar">Cruzar</label>
+                <input type="radio" formControlName="opciones" value="adoptar" />
+                <label for="adoptar">Adoptar</label></span>             
             </div>
-            <textarea name="message" class="form textarea" placeholder="Introduce información sobre tu animal (cuanto más mejor)"></textarea> 
+            <textarea name="message" class="form textarea" placeholder="Introduce información sobre tu animal (cuanto más mejor)"></textarea>
             <div class="relative fullwidth">
-              <button type="submit" formControlName="submit" class="form-btn semibold" [disabled]="!formContacto.valid">ENVIAR</button>
+              <button type="submit" class="form-btn semibold" [disabled]="!formContacto.valid">ENVIAR</button>
             </div>
           </div>
           <div class="clear"></div>
