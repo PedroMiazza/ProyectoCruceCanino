@@ -12,13 +12,17 @@
                   placeholder="Teléfono" />
                 <input type="text" formControlName="address" required="required" class="form" placeholder="Ciudad" />
               </span></div>
-            <span class="col-md-10">
+            <div class="row">
+            <span class="col-md-2">
               <h6>Categoría: </h6>
-              <input type="radio" formControlName="categoria" value="particular" />
-              <label for="particular">Particular</label>
-              <input type="radio" formControlName="categoria" value="profesional" />
-              <label for="profesional">Profesional</label>
             </span>
+            <span class="col-md-10">
+              <input class="col-md-2" type="radio" formControlName="categoria" value="particular" />
+              <label class="col-md-4" for="particular">Particular</label>
+              <input class="col-md-2" type="radio" formControlName="categoria" value="profesional" />
+              <label class="col-md-4" for="profesional">Profesional</label>
+            </span>
+          </div>
             <span>
               <h3 class="col-md-12"><strong>Datos Del Animal:</strong></h3>
             </span>
@@ -33,14 +37,14 @@
                 <h6>Sexo: </h6>
               </span>
               <span class="col-md-3"><input type="radio" formControlName="sexo" value="macho" />
-              <label for="macho">Macho</label>
+              <label for="macho">Macho</label><br>
               <input type="radio" formControlName="sexo" value="hembra" />
               <label for="hembra">Hembra</label></span>             
                 <span class="col-md-3">
                   <h6>Opciones: </h6>
                 </span>
                 <span class="col-md-3"><input type="radio" formControlName="opciones" value="cruzar" />
-                <label for="cruzar">Cruzar</label>
+                <label for="cruzar">Cruzar</label><br>
                 <input type="radio" formControlName="opciones" value="adoptar" />
                 <label for="adoptar">Adoptar</label></span>             
             </div>
