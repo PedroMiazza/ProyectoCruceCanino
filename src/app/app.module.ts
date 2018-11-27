@@ -9,6 +9,7 @@ import { InformacionComponent } from './informacion/informacion.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { InicioComponent } from './inicio/inicio.component';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
