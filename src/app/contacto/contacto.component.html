@@ -5,20 +5,22 @@
       <div class="contact-form">
         <form [formGroup]="formContacto" (ngSubmit)="onSubmit()" method="post" action="#">
           <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s"> 
-            <span><input type="text" formControlName="name" required="required" class="form" placeholder="Nombre" />
+            <div class="row"><span class="col-md-6"><input type="text" formControlName="name" required="required" class="form" placeholder="Nombre" />
             <input type="email" formControlName="mail" required="required" class="form" placeholder="Email" />
-            <input type="text" formControlName="telefono" required="required" class="form" placeholder="Teléfono" />
-            <input type="text" formControlName="address" required="required" class="form" placeholder="Ciudad" />
             </span>
-            <span><h6>Categoría: </h6></span>
+            <span class="col-md-6"><input type="text" formControlName="telefono" required="required" class="form" placeholder="Teléfono" />
+            <input type="text" formControlName="address" required="required" class="form" placeholder="Ciudad" />
+            </span></div>
+            <span class="col-md-10"><h6>Categoría: </h6>
             <input type="radio" formControlName="categoria" name="categoria" required="required" checked="checked" class="radio" placeholder="Particular" id="particular" />
             <label for="particular">Particular</label>
             <input type="radio" formControlName="categoria" name="categoria" required="required" class="radio" placeholder="Profesional" id="profesional" />
             <label for="profesional">Profesional</label>
-            <h3 class="col-xs-6">Datos Del Animal:</h3>
-            <input type="text" formControlName="raza" required="required" class="form" placeholder="Raza" />
-            <input type="text" formControlName="age" required="required" class="form" placeholder="Edad" />
-            <input type="text" formControlName="color" required="required" class="form" placeholder="Color" />
+            </span>
+            <span><h3 class="col-md-12"><strong>Datos Del Animal:</strong></h3></span>
+            <div class="row"><span class="col-md-4"><input type="text" formControlName="raza" required="required" class="form" placeholder="Raza" /></span>
+            <span class="col-md-4"><input type="text" formControlName="age" required="required" class="form" placeholder="Edad" /></span>
+            <span class="col-md-4"><input type="text" formControlName="color" required="required" class="form" placeholder="Color" /></span></div>
             <span><h6>Sexo: </h6></span>
             <input type="radio" formControlName="sexo" name="sexo" required="required" checked="checked" class="radio" placeholder="Macho" id="macho" />
             <label for="macho">Macho</label>
