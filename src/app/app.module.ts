@@ -10,6 +10,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { HttpModule } from '@angular/http';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpModule } from '@angular/http';
     InformacionComponent,
     ContactoComponent,
     QuienesSomosComponent,
-    InicioComponent
+    InicioComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
