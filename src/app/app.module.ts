@@ -11,6 +11,7 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { HttpModule } from '@angular/http';
 import { LoginComponent } from './login/login.component';
+import { ResultadoComponent } from './resultado/resultado.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoginComponent } from './login/login.component';
     ContactoComponent,
     QuienesSomosComponent,
     InicioComponent,
-    LoginComponent
+    LoginComponent,
+    ResultadoComponent
   ],
   imports: [
     BrowserModule,
