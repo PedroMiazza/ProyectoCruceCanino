@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
+import { Validators, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  formLogin: FormGroup
+
+  constructor(private apiService: ApiService) {
+    this.formLogin = new FormGroup({
+      email: new FormControl('', [
+        Validators.required
+      ]),
+      password: new FormControl('', [
+        Validators.required
+      ]),
+      password_repeat: new FormControl(''),
+    }, {
+      validators: [ this.validatorPasswordRepeat ]
+    })
+    }
+   
+validatorPasswordRepeat(group) {
+  if(group.controls.password.value === group.controls.password_repeat.value) {
+    return null
+  } else {
+    return { passwordRepeat: true }
+  }
+}
 
   ngOnInit() {
+  }
+
+  onSubmit(){
+    console.log(this.formLogin.value)
+    this.apiService.registroUsuario(this.formLogin.value).then(response => {
+      console.log(response.json())
+    })
   }
 
 }
