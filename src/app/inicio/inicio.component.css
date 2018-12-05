@@ -1,3 +1,8 @@
+.bg_carrusel{
+  background-image: url('../../assets/images/WallpaperDogs.png');
+  background-repeat: repeat-x;
+}
+
 .carousel {
   max-width: 710px;
   height: auto;
