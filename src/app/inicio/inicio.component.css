@@ -1,10 +1,17 @@
 .carousel {
-  width: 600px;
-  height: 500px;
+  max-width: 710px;
+  height: auto;
   overflow: hidden;
   margin: auto;
   display: block;
   content: "";
+}
+
+.carousel-item {
+  align-items: center;
+}
+img {
+  width: 100%;
 }
 
 .carousel .carousel-indicators li {
