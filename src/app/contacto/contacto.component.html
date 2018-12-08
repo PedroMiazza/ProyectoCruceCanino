@@ -4,49 +4,58 @@
       <div class="contact-form">
         <form [formGroup]="formContacto" (ngSubmit)="onSubmit()">
           <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
-            <div class="row"><span class="col-md-6"><input type="text" formControlName="name" required="required" class="form"
-                  placeholder="Nombre" />
-                <input type="email" formControlName="mail" required="required" class="form" placeholder="Email" />
-              </span>
-              <span class="col-md-6"><input type="text" formControlName="telefono" required="required" class="form"
-                  placeholder="Teléfono" />
-                <input type="text" formControlName="address" required="required" class="form" placeholder="Ciudad" />
-              </span></div>
             <div class="row">
-            <span class="col-md-2">
-              <h6>Categoría: </h6>
-            </span>
-            <span class="col-md-10">
-              <input class="col-md-2" type="radio" formControlName="categoria" value="particular" />
-              <label class="col-md-4" for="particular">Particular</label>
-              <input class="col-md-2" type="radio" formControlName="categoria" value="profesional" />
-              <label class="col-md-4" for="profesional">Profesional</label>
-            </span>
-          </div>
+              <span class="col-md-4">
+                <input type="text" formControlName="name" class="form" placeholder="Nombre" />
+                <input type="mail" formControlName="mail" required="required" class="form" placeholder="Email" />
+              </span>
+              <span class="col-md-4">
+                <input type="text" formControlName="telefono" required="required" class="form" placeholder="Teléfono" />
+                <input type="text" formControlName="address" required="required" class="form" placeholder="Ciudad" />
+              </span>
+              <span class="col-md-4">
+                <input type="text" formControlName="password" required="required" class="form" placeholder="Contraseña" />
+                <input type="text" formControlName="password_repeat" required="required" class="form" placeholder="Repite la Contraseña" />
+              </span>
+            </div>
+            <div class="row">
+              <span class="col-md-2">
+                <h6>Categoría: </h6>
+              </span>
+              <span class="col-md-10">
+                <input class="col-md-1" type="radio" formControlName="categoria" value="particular" />
+                <label class="col-md-6" for="particular">Particular</label>
+                <input class="col-md-1" type="radio" formControlName="categoria" value="profesional" />
+                <label class="col-md-4" for="profesional">Profesional</label>
+              </span>
+            </div>
             <span>
               <h3 class="col-md-12"><strong>Datos Del Animal:</strong></h3>
             </span>
-            <div class="row"><span class="col-md-4"><input type="text" formControlName="raza" required="required" class="form"
-                  placeholder="Raza" /></span>
-              <span class="col-md-4"><input type="text" formControlName="age" required="required" class="form"
-                  placeholder="Edad" /></span>
-              <span class="col-md-4"><input type="text" formControlName="color" required="required" class="form"
-                  placeholder="Color" /></span></div>
+            <div class="row">
+              <span class="col-md-4">
+                <input type="text" formControlName="raza" required="required" class="form" placeholder="Raza" /></span>
+              <span class="col-md-4">
+                <input type="text" formControlName="age" required="required" class="form" placeholder="Edad" /></span>
+              <span class="col-md-4">
+                <input type="text" formControlName="color" required="required" class="form" placeholder="Color" /></span></div>
             <div class="row">
               <span class="col-md-3">
                 <h6>Sexo: </h6>
               </span>
-              <span class="col-md-3"><input type="radio" formControlName="sexo" value="macho" />
-              <label for="macho">Macho</label><br>
-              <input type="radio" formControlName="sexo" value="hembra" />
-              <label for="hembra">Hembra</label></span>             
-                <span class="col-md-3">
-                  <h6>Opciones: </h6>
-                </span>
-                <span class="col-md-3"><input type="radio" formControlName="opciones" value="cruzar" />
-                <label for="cruzar">Cruzar</label><br>
-                <input type="radio" formControlName="opciones" value="adoptar" />
-                <label for="adoptar">Adoptar</label></span>             
+              <span class="col-md-3">
+                <input class="col-md-2" type="radio" formControlName="sexo" value="macho" />
+                <label class="col-md-4" for="macho">Macho</label><br>
+                <input class="col-md-2" type="radio" formControlName="sexo" value="hembra" />
+                <label class="col-md-4" for="hembra">Hembra</label></span>
+              <span class="col-md-3">
+                <h6>Opciones: </h6>
+              </span>
+              <span class="col-md-3">
+                <input class="col-md-2" type="radio" formControlName="opciones" value="cruzar" />
+                <label class="col-md-4" for="cruzar">Cruzar</label><br>
+                <input class="col-md-2" type="radio" formControlName="opciones" value="adoptar" />
+                <label class="col-md-4" for="adoptar">Adoptar</label></span>
             </div>
             <textarea name="message" class="form textarea" placeholder="Introduce información sobre tu animal. Ejemplo: castrado o no, si ha tenido cachorros antes, etc."></textarea>
             <div class="relative fullwidth">

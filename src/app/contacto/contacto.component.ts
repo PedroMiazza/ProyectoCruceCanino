@@ -18,6 +18,7 @@ export class ContactoComponent implements OnInit {
         Validators.required
       ]),
       mail: new FormControl('', [
+        Validators.email,
         Validators.required
       ]),
       telefono: new FormControl('', [

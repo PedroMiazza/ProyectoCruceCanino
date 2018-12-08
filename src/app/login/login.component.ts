@@ -18,12 +18,9 @@ export class LoginComponent implements OnInit {
       ]),
       password: new FormControl('', [
         Validators.required
-      ]),
-      password_repeat: new FormControl(''),
-    }, {
-      validators: [ this.validatorPasswordRepeat ]
-    })
-    }
+      ])
+    })  
+  }
    
 validatorPasswordRepeat(group) {
   if(group.controls.password.value === group.controls.password_repeat.value) {
@@ -38,8 +35,9 @@ validatorPasswordRepeat(group) {
 
   onSubmit(){
     console.log(this.formLogin.value)
-    this.apiService.registroUsuario(this.formLogin.value).then(response => {
+    this.apiService.loginUsuario(this.formLogin.value).then(response => {
       console.log(response.json())
+      
     })
   }
 

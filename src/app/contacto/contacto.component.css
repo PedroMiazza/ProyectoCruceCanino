@@ -52,13 +52,13 @@
    }
    
    .form:hover {
-    border: 1px solid #8BC3A3;
+    /* border: 1px solid #8BC3A3; */
    }
    
    .form:focus {
     color: white;
     outline: none;
-    border: 1px solid #8BC3A3;
+    /* border: 1px solid #8BC3A3; */
    }
    
    .textarea {
@@ -137,4 +137,8 @@
    input {
     position: relative;
     z-index: 9999;
+   }
+
+   input.ng-invalid{
+       border: 1px solid red;
    }

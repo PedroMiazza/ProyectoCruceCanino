@@ -12,6 +12,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { HttpModule } from '@angular/http';
 import { LoginComponent } from './login/login.component';
 import { ResultadoComponent } from './resultado/resultado.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ResultadoComponent } from './resultado/resultado.component';
     QuienesSomosComponent,
     InicioComponent,
     LoginComponent,
-    ResultadoComponent
+    ResultadoComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

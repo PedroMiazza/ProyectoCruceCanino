@@ -1,4 +1,14 @@
 .info{
     background-image: url('../../assets/images/WallpaperDogs2.png');
     background-repeat: repeat;
+    background-size: contain;
+    height: 100%;
+    text-shadow: 2px 2px 0 #fff;
+  }
+
+.perros {
+    width: 20%;
+    display: block;
+    margin: auto;
+    content: "";
   }

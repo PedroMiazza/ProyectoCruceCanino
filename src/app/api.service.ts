@@ -8,19 +8,19 @@ export class ApiService {
 
   constructor(private http: Http) { }
 
-  lanzarPremio() {
+  loguearse() {
     let headers = new Headers()
-    headers.append('user-token', 'PmL3X&¡JlbjD&Z92nC¿r')
+    headers.append('user-token', '')
     let opts = new RequestOptions()
     opts.headers = headers
     return this.http.get('', opts).toPromise()
   }
   //Otra forma:
-  //registroUsuario({name, surname, username, password, mail, address, age})
+  //registroUsuario({email, password})
   registroUsuario(values) {
     return this.http.post('', values).toPromise()
   }
-  //values -> {name: 'Mario, surname: 'Girón', username: 'Pichichi24', password: '1234', mail: 'correo@gmail.com', address: 'Gran Via 23', age: '35} 
+  //values -> {mail: 'correo@gmail.com', password: '1234'} 
 
   loginUsuario(values) {
     return this.http.post('', values).toPromise()

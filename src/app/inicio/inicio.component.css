@@ -1,6 +1,7 @@
 .bg_carrusel{
-  background-image: url('../../assets/images/WallpaperDogs.png');
-  background-repeat: repeat;
+  background: url('../../assets/images/WallpaperDogs.png') left no-repeat, 
+  url('../../assets/images/WallpaperDogs1.png') right no-repeat;
+  width: 100%;
 }
 
 .carousel {
@@ -21,10 +22,4 @@ img {
 
 .carousel .carousel-indicators li {
   float: left;
-}
-
-footer{
-  width: 100%;
-  bottom: 0px;
-  position: fixed;
 }
