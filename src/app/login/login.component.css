@@ -100,3 +100,6 @@
     position: relative;
     z-index: 9999;
    }
+   #collapseExample1{
+       position: absolute;
+   }

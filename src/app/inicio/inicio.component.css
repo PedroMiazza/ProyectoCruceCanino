@@ -2,6 +2,7 @@
   background: url('../../assets/images/WallpaperDogs.png') left no-repeat, 
   url('../../assets/images/WallpaperDogs1.png') right no-repeat;
   width: 100%;
+  position: relative;
 }
 
 .carousel {

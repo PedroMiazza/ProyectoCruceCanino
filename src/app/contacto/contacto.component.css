@@ -142,3 +142,7 @@
    input.ng-invalid{
        border: 1px solid red;
    }
+
+   #collapseExample{
+       position: absolute;
+   }
