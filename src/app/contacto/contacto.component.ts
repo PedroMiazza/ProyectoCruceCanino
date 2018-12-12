@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ApiService } from '../api.service';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-contacto',
@@ -14,33 +15,43 @@ export class ContactoComponent implements OnInit {
 
   constructor(private apiService: ApiService) {
     this.formContacto = new FormGroup({
-      name: new FormControl('', [
-        Validators.required
+      nombre: new FormControl('', [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(40)
       ]),
       mail: new FormControl('', [
-        Validators.email,
-        Validators.required
+        Validators.required,
+        Validators.email
       ]),
       telefono: new FormControl('', [
-        Validators.required
+        Validators.required,
+        Validators.minLength(9),
+        Validators.maxLength(11),
+        Validators.pattern(/^[0-9]*$/)
       ]),
-      address: new FormControl(''),
-      categoria: new FormControl(''),
-      raza: new FormControl(''),
-      age: new FormControl(''),
-      color: new FormControl(''),
-      sexo: new FormControl(''),
-      opciones: new FormControl(''),
+      ciudad: new FormControl(''),
       username: new FormControl('', [
         Validators.required
       ]),
       password: new FormControl('', [
-        Validators.required
+        Validators.required,
+        Validators.pattern(/(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$/)
       ]),
       password_repeat: new FormControl(''),
+      categoria: new FormControl(''),
+      raza: new FormControl(''),
+      edad: new FormControl('', [
+        Validators.required,
+        Validators.pattern(/^[0-9]*$/), this.edadValidator
+      ]),
+      color: new FormControl(''),
+      sexo: new FormControl(''),
+      opciones: new FormControl(''),
+      message: new FormControl('')
     }, {
-      validators: [ this.validatorPasswordRepeat ]
-    })
+        validators: [ this.validatorPasswordRepeat ]
+      })
   }
 
   validatorPasswordRepeat(group) {
@@ -48,6 +59,24 @@ export class ContactoComponent implements OnInit {
       return null
     } else {
       return { passwordRepeat: true }
+    }
+  }
+
+  edadValidator(control){
+    const edadMax = 29
+    const edadMin = 1
+
+    let edadNum = parseInt(control.value)
+
+    if (edadNum < edadMin || edadNum > edadMax){
+      return {
+          edad:{
+            edadMaxima: edadMax,
+            edadMinima: edadMin
+          }
+      }
+    }else {
+      return null
     }
   }
 
@@ -59,6 +88,11 @@ export class ContactoComponent implements OnInit {
     this.apiService.registroUsuario(this.formContacto.value).then(response => {
       console.log(response.json())
     })
+  }
+
+  envioFormulario(){
+    console.log(this.formContacto.value)
+    console.log(this.formContacto.valid)
   }
 
 }

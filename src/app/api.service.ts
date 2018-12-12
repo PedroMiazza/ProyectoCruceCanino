@@ -18,12 +18,13 @@ export class ApiService {
   //Otra forma:
   //registroUsuario({email, password})
   registroUsuario(values) {
-    return this.http.post('', values).toPromise()
+    //console.log('Dentro del SERVICIO')
+    return this.http.post('http://localhost:3000/api/usuarios/', values).toPromise()
   }
   //values -> {mail: 'correo@gmail.com', password: '1234'} 
 
   loginUsuario(values) {
-    return this.http.post('', values).toPromise()
+    return this.http.post('http://localhost:3000/api/usuarios/', values).toPromise()
 
   }
 }

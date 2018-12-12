@@ -5,17 +5,20 @@
         <form [formGroup]="formContacto" (ngSubmit)="onSubmit()">
           <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
             <div class="row">
-              <span class="col-md-4">
-                <input type="text" formControlName="name" class="form" placeholder="Nombre" />
+              <span class="col-md-3">
+                <input type="text" formControlName="nombre" class="form" placeholder="Nombre" />
                 <input type="mail" formControlName="mail" required="required" class="form" placeholder="Email" />
               </span>
-              <span class="col-md-4">
+              <span class="col-md-3">
                 <input type="text" formControlName="telefono" required="required" class="form" placeholder="Teléfono" />
-                <input type="text" formControlName="address" required="required" class="form" placeholder="Ciudad" />
+                <input type="text" formControlName="ciudad" required="required" class="form" placeholder="Ciudad" />
               </span>
-              <span class="col-md-4">
-                <input type="text" formControlName="password" required="required" class="form" placeholder="Contraseña" />
-                <input type="text" formControlName="password_repeat" required="required" class="form" placeholder="Repite la Contraseña" />
+              <span class="col-md-3">
+                  <input type="text" formControlName="username" required="required" class="form" placeholder="Usuario" />
+                </span>
+              <span class="col-md-3">
+                <input type="password" formControlName="password" required="required" class="form" placeholder="Contraseña" />
+                <input type="password" formControlName="password_repeat" required="required" class="form" placeholder="Repite la Contraseña" />
               </span>
             </div>
             <div class="row">
@@ -36,7 +39,7 @@
               <span class="col-md-4">
                 <input type="text" formControlName="raza" required="required" class="form" placeholder="Raza" /></span>
               <span class="col-md-4">
-                <input type="text" formControlName="age" required="required" class="form" placeholder="Edad" /></span>
+                <input type="text" formControlName="edad" required="required" class="form" placeholder="Edad" /></span>
               <span class="col-md-4">
                 <input type="text" formControlName="color" required="required" class="form" placeholder="Color" /></span></div>
             <div class="row">
@@ -57,19 +60,13 @@
                 <input class="col-md-2" type="radio" formControlName="opciones" value="adoptar" />
                 <label class="col-md-4" for="adoptar">Adoptar</label></span>
             </div>
-            <textarea name="message" class="form textarea" placeholder="Introduce información sobre tu animal. Ejemplo: castrado o no, si ha tenido cachorros antes, etc."></textarea>
+            <textarea formControlName="message" class="form textarea" placeholder="Introduce información sobre tu animal. Ejemplo: castrado o no, si ha tenido cachorros antes, etc."></textarea>
             <div class="relative fullwidth">
               <button type="submit" class="form-btn semibold" [disabled]="!formContacto.valid">ENVIAR</button>
             </div>
           </div>
           <div class="clear"></div>
         </form>
-        <div class="mail-message-area">
-          <div class="alert gray-bg mail-message not-visible-message">
-            <strong>¡Gracias!</strong>Tu correo electrónico ha sido entregado.
-          </div>
-        </div>
-
       </div>
     </div>
   </div>

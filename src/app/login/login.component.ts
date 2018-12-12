@@ -13,11 +13,12 @@ export class LoginComponent implements OnInit {
 
   constructor(private apiService: ApiService) {
     this.formLogin = new FormGroup({
-      email: new FormControl('', [
+      username: new FormControl('', [
         Validators.required
       ]),
       password: new FormControl('', [
-        Validators.required
+        Validators.required,
+        Validators.pattern(/(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$/)
       ])
     })  
   }
