@@ -1,2 +1,31 @@
-<app-inicio></app-inicio>
-<app-footer></app-footer>
+<div>
+    <button class="botones text-warning col-md-6" [routerLink]="['/listado/adoptar']">Adoptar</button>
+    <button class="botones text-info col-md-6" [routerLink]="['/listado/cruzar']">Cruzar</button>
+</div>
+<div class="container">
+    <div class="row">
+    <!-- <div class="fichaP bg-light col-12 border border-warning rounded m-3"> -->
+        <!-- <div class="fotoPerro float-left bg-light">
+            <img src="./assets/images/smalldog.jpg" class="img-fluid" alt="">
+        </div> -->
+        <div class="col-md-6 bg-primary rounded">
+                <h3>Datos del contacto:</h3>
+                <p><strong>Nombre:</strong> {{mostrarU?.nombre}}</p>
+                <p><strong>Email:</strong> {{mostrarU?.email}}</p>
+                <p><strong>Teléfono:</strong> {{mostrarU?.telefono}}</p>
+                <p><strong>Ciudad:</strong> {{mostrarU?.ciudad}}</p>                    
+                <p><strong class="text-white">Categoría:</strong> {{mostrarU?.categoria}}</p>
+        </div>
+        <div class="animal col-md-6 border border-primary rounded" *ngFor="let m of mostrarP">
+            <h3>Datos del animal:</h3>
+                <p><strong>Raza:</strong> {{m.raza}}</p>
+                <p><strong>Edad:</strong> {{m.edad}}</p>
+                <p><strong>Color:</strong> {{m.color}}</p>
+                <p><strong>Sexo:</strong> {{m.sexo}}</p>
+                <p><strong>Opciones:</strong> {{m.opciones}}</p>
+                <p><strong>Mensaje:</strong> {{m.mensaje}}</p>
+        </div>
+        
+    <!-- </div> -->
+</div>
+</div>  

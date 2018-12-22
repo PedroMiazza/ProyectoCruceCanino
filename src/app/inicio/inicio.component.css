@@ -24,3 +24,7 @@ img {
 .carousel .carousel-indicators li {
   float: left;
 }
+
+.botones{
+  cursor: pointer;
+}

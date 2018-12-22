@@ -21,10 +21,34 @@ export class ApiService {
     //console.log('Dentro del SERVICIO')
     return this.http.post('http://localhost:3000/api/usuarios/', values).toPromise()
   }
-  //values -> {mail: 'correo@gmail.com', password: '1234'} 
-
+   
   loginUsuario(values) {
-    return this.http.post('http://localhost:3000/api/usuarios/', values).toPromise()
-
+    return this.http.post('http://localhost:3000/api/login/', values).toPromise()
+    //values -> {mail: 'correo@gmail.com', password: '1234'}
   }
+
+  recogeUsuarios() {
+    return this.http.get('http://localhost:3000/api/usuarios').toPromise()
+  }
+
+  recogePerros() {
+    return this.http.get('http://localhost:3000/api/perros').toPromise()
+  }
+
+  mostrarAdoptar() {
+    return this.http.get('http://localhost:3000/api/perros/listado/adoptar').toPromise()
+  }
+
+  mostrarCruzar() {
+    return this.http.get('http://localhost:3000/api/perros/listado/cruzar').toPromise()
+  }
+
+  recogeUsuarioPorId(idUsuario) {
+    return this.http.get('http://localhost:3000/api/usuarios/'+idUsuario).toPromise()
+  }
+
+  recogePerrosPorUsuario(idUsuario) {
+    return this.http.get('http://localhost:3000/api/perros/usuario/'+idUsuario).toPromise()
+  }
+  
 }

@@ -4,7 +4,7 @@
 <header class="container-fluid bg-light sticky-top">
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-light">
-			<a class="navbar-brand" href="#"><i class="fas fa-paw"></i> cruza<strong>Can</strong></a>
+			<a class="navbar-brand" [routerLink]="['/inicio']"><i class="fas fa-paw"></i> cruza<strong>Can</strong></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
 			 aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -12,21 +12,21 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="inicio">Inicio <span class="sr-only">(current)</span></a>
+						<a class="nav-link" [routerLink]="['/inicio']">Inicio <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false"
 						 aria-controls="collapseExample1">Login</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="informacion">Info</a>
+						<a class="nav-link" [routerLink]="['/informacion']">Info</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Quienes Somos</a>
+						<a class="nav-link" [routerLink]="['/quienes-somos']">Quienes Somos</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-						 aria-controls="collapseExample">Contacto</a>
+						 aria-controls="collapseExample">Registro</a>
 					</li>
 				</ul>
 			</div>

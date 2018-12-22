@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { ResultadoComponent } from './resultado/resultado.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { ListadoComponent } from './listado/listado.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     ResultadoComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ListadoComponent
   ],
   imports: [
     BrowserModule,

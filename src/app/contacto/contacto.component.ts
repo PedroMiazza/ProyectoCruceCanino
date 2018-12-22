@@ -38,7 +38,9 @@ export class ContactoComponent implements OnInit {
         Validators.required,
         Validators.pattern(/(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$/)
       ]),
-      password_repeat: new FormControl(''),
+      password_repeat: new FormControl('', [
+        Validators.pattern(/(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$/)
+      ]),
       categoria: new FormControl(''),
       raza: new FormControl(''),
       edad: new FormControl('', [

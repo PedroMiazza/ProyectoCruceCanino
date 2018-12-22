@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+    <!-- <div class="fichaP bg-light col-12 border border-warning rounded m-3"> -->
+        <!-- <div class="fotoPerro float-left bg-light">
+            <img src="./assets/images/smalldog.jpg" class="img-fluid" alt="">
+        </div> -->
+        <div class="bg-primary rounded text-center col-md-5 m-4 p-4" *ngFor="let m of perros" routerLink="/resultado/{{m.id}}">
+                <h3>Datos del perro</h3>
+                <p><strong>Sexo:</strong> {{m.sexo}}</p>
+                <p><strong>Edad:</strong> {{m.edad}}</p>                    
+                <p><strong class="text-white">Raza:</strong> {{m.raza}}</p>
+        </div>
+  </div>
+</div>  
